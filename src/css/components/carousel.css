@@ -1,0 +1,6 @@
+/* Carousel */
+@layer components {
+  .carousel {
+    background-color: red;
+  }
+}
