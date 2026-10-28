@@ -4,7 +4,7 @@
 
 ### Added
 
-- Added the Carousel component (`.carousel`), built on native CSS scroll snapping with no dependencies. It supports `basis-*` slide sizes, spacing utilities, `data-orientation="vertical"`, `data-align="start|center|end"`, `data-loop` (rewinds to the other end), arrow keys, RTL, and a JavaScript API (`scrollPrev()`, `scrollNext()`, `scrollToIndex()`, `index`, `count`, `refresh()` and a `change` event). Unlike shadcn/ui's Embla-based carousel, it does not support mouse dragging or endless looping at the moment.
+- Added the Carousel component (`.carousel`), built on native CSS scroll snapping with no dependencies. It supports `basis-*` slide sizes, spacing utilities, `data-orientation="vertical"`, `data-align="start|center|end"`, `data-loop` (rewinds to the other end), `data-start-index`, arrow keys, RTL, and a JavaScript API (`scrollPrev()`, `scrollNext()`, `scrollToIndex()`, `index`, `count`, `refresh()` and a `change` event). Unlike shadcn/ui's Embla-based carousel, it does not support mouse dragging or endless looping at the moment.
 
 ## [1.1.0] - 2026-10-23
 

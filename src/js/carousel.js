@@ -164,7 +164,6 @@
       if (!state.viewport) return;
       updateCarousel(root);
       const { snaps } = state;
-      slid;
       if (!snaps.length) return;
 
       const target = Math.min(snaps.length - 1, Math.max(0, index));
@@ -251,6 +250,16 @@
       passive: true,
     });
     state.resizeObserver.observe(state.viewport);
+
+    // Jump to data-start-index before the first update, so it doesn't animate or fire `change`.
+    const startIndex = Number.parseInt(root.dataset.startIndex, 10);
+    if (startIndex > 0) {
+      const snaps = getSnaps(root, state);
+      state.viewport.scrollTo({
+        [isVertical(root) ? "top" : "left"]: snaps[Math.min(snaps.length - 1, startIndex)],
+        behavior: "instant",
+      });
+    }
     updateCarousel(root);
 
     root._destroy = () => {

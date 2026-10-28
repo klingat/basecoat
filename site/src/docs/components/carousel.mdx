@@ -226,8 +226,10 @@ The previous and next buttons sit outside the carousel, so leave room for them a
   </dt>
   <dd>
     Root carousel container. Supports <code>data-orientation="vertical"</code>,{" "}
-    <code>data-align="start|center|end"</code> (default <code>center</code>),
-    and <code>data-loop</code>.
+    <code>data-align="start|center|end"</code> (default <code>center</code>),{" "}
+    <code>data-loop</code>, and{" "}
+    <code>data-start-index="&#123; INDEX &#125;"</code> (zero-based position to
+    start on).
     <dl>
       <dt>
         <code>&lt;div&gt;</code>
@@ -538,6 +540,423 @@ Slides are spaced with `ps-4` on each slide and `-ms-4` on the viewport (`pt-4` 
         <path d="m9 18 6-6-6-6" />
       </svg>
     </button>
+  </div>
+</Preview>
+
+### Alignment
+
+Set `data-align` to `start`, `center` (default) or `end` to choose where the current slide sits when slides are narrower than the carousel. The dashed line marks where the current slide lines up.
+
+<Preview class="grid w-full max-w-sm gap-8">
+  <div class="grid gap-2">
+    <p class="text-muted-foreground text-sm">
+      <code>data-align="start"</code>: the current slide lines up with the start
+      edge.
+    </p>
+    <div
+      class="carousel"
+      role="region"
+      aria-roledescription="carousel"
+      aria-label="Aligned to start"
+      data-align="start"
+      data-start-index="2"
+    >
+      <span
+        aria-hidden="true"
+        class="border-primary pointer-events-none absolute inset-y-0 start-1 z-10 border-s-2 border-dashed"
+      ></span>
+      <div>
+        <div
+          class="basis-2/3"
+          role="group"
+          aria-roledescription="slide"
+          aria-label="1 of 5"
+        >
+          <div class="p-1">
+            <div class="card">
+              <section class="flex items-center justify-center p-6">
+                <span class="text-2xl font-semibold">1</span>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div
+          class="basis-2/3"
+          role="group"
+          aria-roledescription="slide"
+          aria-label="2 of 5"
+        >
+          <div class="p-1">
+            <div class="card">
+              <section class="flex items-center justify-center p-6">
+                <span class="text-2xl font-semibold">2</span>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div
+          class="basis-2/3"
+          role="group"
+          aria-roledescription="slide"
+          aria-label="3 of 5"
+        >
+          <div class="p-1">
+            <div class="card">
+              <section class="flex items-center justify-center p-6">
+                <span class="text-2xl font-semibold">3</span>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div
+          class="basis-2/3"
+          role="group"
+          aria-roledescription="slide"
+          aria-label="4 of 5"
+        >
+          <div class="p-1">
+            <div class="card">
+              <section class="flex items-center justify-center p-6">
+                <span class="text-2xl font-semibold">4</span>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div
+          class="basis-2/3"
+          role="group"
+          aria-roledescription="slide"
+          aria-label="5 of 5"
+        >
+          <div class="p-1">
+            <div class="card">
+              <section class="flex items-center justify-center p-6">
+                <span class="text-2xl font-semibold">5</span>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        type="button"
+        class="btn"
+        data-variant="outline"
+        data-size="icon-sm"
+        data-carousel-prev
+        aria-label="Previous slide"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-chevron-left"
+        >
+          <path d="m15 18-6-6 6-6" />
+        </svg>
+      </button>
+      <button
+        type="button"
+        class="btn"
+        data-variant="outline"
+        data-size="icon-sm"
+        data-carousel-next
+        aria-label="Next slide"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-chevron-right"
+        >
+          <path d="m9 18 6-6-6-6" />
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="grid gap-2">
+    <p class="text-muted-foreground text-sm">
+      <code>data-align="center"</code>: the current slide is centered.
+    </p>
+    <div
+      class="carousel"
+      role="region"
+      aria-roledescription="carousel"
+      aria-label="Aligned to center"
+      data-align="center"
+      data-start-index="2"
+    >
+      <span
+        aria-hidden="true"
+        class="border-primary pointer-events-none absolute inset-y-0 left-1/2 z-10 border-s-2 border-dashed"
+      ></span>
+      <div>
+        <div
+          class="basis-2/3"
+          role="group"
+          aria-roledescription="slide"
+          aria-label="1 of 5"
+        >
+          <div class="p-1">
+            <div class="card">
+              <section class="flex items-center justify-center p-6">
+                <span class="text-2xl font-semibold">1</span>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div
+          class="basis-2/3"
+          role="group"
+          aria-roledescription="slide"
+          aria-label="2 of 5"
+        >
+          <div class="p-1">
+            <div class="card">
+              <section class="flex items-center justify-center p-6">
+                <span class="text-2xl font-semibold">2</span>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div
+          class="basis-2/3"
+          role="group"
+          aria-roledescription="slide"
+          aria-label="3 of 5"
+        >
+          <div class="p-1">
+            <div class="card">
+              <section class="flex items-center justify-center p-6">
+                <span class="text-2xl font-semibold">3</span>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div
+          class="basis-2/3"
+          role="group"
+          aria-roledescription="slide"
+          aria-label="4 of 5"
+        >
+          <div class="p-1">
+            <div class="card">
+              <section class="flex items-center justify-center p-6">
+                <span class="text-2xl font-semibold">4</span>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div
+          class="basis-2/3"
+          role="group"
+          aria-roledescription="slide"
+          aria-label="5 of 5"
+        >
+          <div class="p-1">
+            <div class="card">
+              <section class="flex items-center justify-center p-6">
+                <span class="text-2xl font-semibold">5</span>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        type="button"
+        class="btn"
+        data-variant="outline"
+        data-size="icon-sm"
+        data-carousel-prev
+        aria-label="Previous slide"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-chevron-left"
+        >
+          <path d="m15 18-6-6 6-6" />
+        </svg>
+      </button>
+      <button
+        type="button"
+        class="btn"
+        data-variant="outline"
+        data-size="icon-sm"
+        data-carousel-next
+        aria-label="Next slide"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-chevron-right"
+        >
+          <path d="m9 18 6-6-6-6" />
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="grid gap-2">
+    <p class="text-muted-foreground text-sm">
+      <code>data-align="end"</code>: the current slide lines up with the end
+      edge.
+    </p>
+    <div
+      class="carousel"
+      role="region"
+      aria-roledescription="carousel"
+      aria-label="Aligned to end"
+      data-align="end"
+      data-start-index="2"
+    >
+      <span
+        aria-hidden="true"
+        class="border-primary pointer-events-none absolute inset-y-0 end-1 z-10 border-s-2 border-dashed"
+      ></span>
+      <div>
+        <div
+          class="basis-2/3"
+          role="group"
+          aria-roledescription="slide"
+          aria-label="1 of 5"
+        >
+          <div class="p-1">
+            <div class="card">
+              <section class="flex items-center justify-center p-6">
+                <span class="text-2xl font-semibold">1</span>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div
+          class="basis-2/3"
+          role="group"
+          aria-roledescription="slide"
+          aria-label="2 of 5"
+        >
+          <div class="p-1">
+            <div class="card">
+              <section class="flex items-center justify-center p-6">
+                <span class="text-2xl font-semibold">2</span>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div
+          class="basis-2/3"
+          role="group"
+          aria-roledescription="slide"
+          aria-label="3 of 5"
+        >
+          <div class="p-1">
+            <div class="card">
+              <section class="flex items-center justify-center p-6">
+                <span class="text-2xl font-semibold">3</span>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div
+          class="basis-2/3"
+          role="group"
+          aria-roledescription="slide"
+          aria-label="4 of 5"
+        >
+          <div class="p-1">
+            <div class="card">
+              <section class="flex items-center justify-center p-6">
+                <span class="text-2xl font-semibold">4</span>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div
+          class="basis-2/3"
+          role="group"
+          aria-roledescription="slide"
+          aria-label="5 of 5"
+        >
+          <div class="p-1">
+            <div class="card">
+              <section class="flex items-center justify-center p-6">
+                <span class="text-2xl font-semibold">5</span>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        type="button"
+        class="btn"
+        data-variant="outline"
+        data-size="icon-sm"
+        data-carousel-prev
+        aria-label="Previous slide"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-chevron-left"
+        >
+          <path d="m15 18-6-6 6-6" />
+        </svg>
+      </button>
+      <button
+        type="button"
+        class="btn"
+        data-variant="outline"
+        data-size="icon-sm"
+        data-carousel-next
+        aria-label="Next slide"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-chevron-right"
+        >
+          <path d="m9 18 6-6-6-6" />
+        </svg>
+      </button>
+    </div>
   </div>
 </Preview>
 
